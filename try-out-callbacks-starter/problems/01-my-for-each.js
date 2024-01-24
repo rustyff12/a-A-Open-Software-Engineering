@@ -20,15 +20,14 @@ myForEach(['laika', 'belka'], function (el) {
 });
 console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
-
-let myForEach = function (array, cb) {
+let myForEach = function (array, callback) {
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
-        cb(element, i);
+        callback(element, i);
     }
 };
 
-myForEach(["a", "b", "c"], function (el, i) {
+/* myForEach(["a", "b", "c"], function (el, i) {
     console.log(el + " is at index " + i);
 }); // prints
 // a is at index 0
@@ -39,7 +38,7 @@ let test = [];
 myForEach(["laika", "belka"], function (el) {
     test.push(el.toUpperCase());
 });
-console.log(test); // ['LAIKA', 'BELKA']
+console.log(test); // ['LAIKA', 'BELKA'] */
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = myForEach;
